@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Brightness increment for mac user who uses ubuntu
+
+brightness=$(cat /sys/class/backlight/acpi_video0/brightness)
+inc=5
+brightness=$(($brightness+$inc))
+
+
+# chmod 777 /sys/class/backlight/acpi_video0/brightness
+echo $brightness > /sys/class/backlight/acpi_video0/brightness

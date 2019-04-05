@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Change the fnmode for mac so that it can use Fn# in bindsym
+echo 2 > /sys/module/hid_apple/parameters/fnmode

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+brightness=$(cat /sys/class/backlight/acpi_video0/brightness)
+inc=5
+brightness=$(($brightness-$inc))
+#Change the permission of the brightness file to 777 or anything that doesnt require
+#sudo to write over it
+echo $brightness > /sys/class/backlight/acpi_video0/brightness
+#sudo echo $curr+5 > cat/sys/class/backlight/acpi_video0/brightness
